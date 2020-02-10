@@ -6,7 +6,12 @@ const routes = require('./routes');
 
 const server = express();
 
-mongoose.connect('mongodb+srv://ridam:Ridam5533@cluster0-gtsrp.mongodb.net/lembretes?retryWrites=true&w=majority', {
+mongoose.set('useCreateIndex', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+
+mongoose.connect('mongodb+srv://ridam:5533@cluster0-gtsrp.mongodb.net/lembretes?retryWrites=true&w=majority', {
   useNewUrlParser: true,
 });
 
