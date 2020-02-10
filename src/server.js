@@ -19,4 +19,6 @@ server.use( cors() );
 server.use( express.json() );
 server.use( routes );
 
-server.listen(3333);
+const porta = process.env.PORT || 3333;
+
+server.listen( porta );
